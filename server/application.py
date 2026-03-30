@@ -1,7 +1,7 @@
 import http.server
 import socketserver
 
-PORT=8000
+PORT = 8000
 
 class TestMe():
     def take_five(self):
@@ -11,7 +11,7 @@ class TestMe():
 
 if __name__ == '__main__':
     Handler = http.server.SimpleHTTPRequestHandler
-    
+
     with socketserver.TCPServer(("",PORT), Handler) as http:
         print("servingatport", PORT)
         http.serve_forever()
